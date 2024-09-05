@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הזן קוד</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        input[type="password"] {
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>הזן קוד כדי להיכנס</h2>
+    <input type="password" id="codeInput" placeholder="הזן קוד">
+    <br>
+    <button onclick="checkCode()">כניסה</button>
+</div>
+
+<script>
+    function checkCode() {
+        var code = document.getElementById('codeInput').value;
+        if (code === 'HAIMLEVI14') {
+            window.location.href = 'https://www.inn.co.il';
+        } else {
+            alert('הקוד שהוזן שגוי. נסה שוב.');
+        }
+    }
+</script>
+
+</body>
+</html>
